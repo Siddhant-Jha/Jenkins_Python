@@ -7,14 +7,15 @@ pipeline {
     stages {
         stage('Building Image') {
             steps {
-                sh 'python3 --version'
                 
+                sh 'flask --version'
             }
         }
         stage('Running Container') {
             steps {
                 echo "Step 2: Running Container"
-                sh 'flask --version'
+                sh 'python3 --version'
+                
             }
         }
         stage('deploy') {
